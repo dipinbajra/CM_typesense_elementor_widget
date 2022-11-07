@@ -85,7 +85,7 @@ class Elementor_CM_Typesense extends \Elementor\Widget_base{
 				$this->add_responsive_control(
 					'search_width',
 					[
-						'label' => esc_html__( 'Search Box Width', 'text-domain' ),
+						'label' => esc_html__( 'Search Box Width', 'CM Typesense' ),
 						'type' => \Elementor\Controls_Manager::SLIDER,
 						'size_units' => [ 'px', '%' ],
 					'range' => [
