@@ -73,13 +73,52 @@ class Elementor_CM_Typesense extends \Elementor\Widget_base{
 	}
 
 
+	protected function register_controls(){
+		$this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Layout', 'textdomain' ),
+				'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
+			]
+			);
+			
+				$this->add_responsive_control(
+					'search_width',
+					[
+						'label' => esc_html__( 'Search Box Width', 'text-domain' ),
+						'type' => \Elementor\Controls_Manager::SLIDER,
+						'size_units' => [ 'px', '%' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 1000,
+							'step' => 5,
+						],
+						'%' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => '',
+					],
+					'selectors' => [
+						'{{WRAPPER}} .ais-SearchBox-form' => 'width: {{SIZE}}{{UNIT}};',
+					],
+					],
+					
+					);
+			
+	}			
+		
+
 
 	protected function render() {
 		
 
        echo do_shortcode('[cm_typesense_search placeholder="Search for" columns="3" post_types="page,post" filter="show"  per_page="3"  sortby="show" pagination="show" query_by="post_title,post_content" sticky_first="no"]');
 		
-
 	}
 
     
