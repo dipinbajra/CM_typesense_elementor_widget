@@ -1,0 +1,19 @@
+{
+    "name": "codemanas/cm-typesense",
+    "description": "Plugin for TS elementor",
+    "type": "wordpress-plugin",
+    "license": "GPL-2",
+    "autoload": {
+        "psr-4": {
+            "Codemanas\\TypesenseElementor\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "codemanas",
+            "email": "info@codemanas.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

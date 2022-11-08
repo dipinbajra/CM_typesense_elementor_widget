@@ -1,4 +1,5 @@
 <?php
+namespace Codemanas\TypesenseElementor\Widgets;
 
 use Codemanas\Typesense\Backend\Admin;
 
@@ -6,7 +7,7 @@ if( ! defined('ABSPATH')){
     exit;
 }
 
-class Elementor_CM_Typesense extends \Elementor\Widget_base{
+class InstantSearch extends \Elementor\Widget_base{
 
 
 	public function __construct( $data = [], $args = null)
