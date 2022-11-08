@@ -19,15 +19,15 @@ class Bootstrap {
 	}
 	public function initPlugin(  ) {
 		Main::get_instance();
-		$obj = new test();
-		var_dump($obj);
-		$obj1 = new test();
-		var_dump($obj1);
-
-		$obj = SingletonTest::get_instance();
-		var_dump($obj);
-		$obj1 = SingletonTest::get_instance();
-		var_dump($obj1);die;
+//		$obj = new test();
+//		var_dump($obj);
+//		$obj1 = new test();
+//		var_dump($obj1);
+//
+//		$obj = SingletonTest::get_instance();
+//		var_dump($obj);
+//		$obj1 = SingletonTest::get_instance();
+//		var_dump($obj1);die;
 
 
 	}
