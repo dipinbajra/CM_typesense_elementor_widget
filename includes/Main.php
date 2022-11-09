@@ -3,7 +3,7 @@
 namespace Codemanas\TypesenseElementor;
 
 use Codemanas\TypesenseElementor\Widgets\InstantSearch;
-
+use Codemanas\TypesenseElementor\Widgets\AutoComplete;
 class Main {
 	public static ?Main $instance = null;
 
@@ -17,5 +17,6 @@ class Main {
 
 	public function register_widget( $widget_manager ) {
 		$widget_manager->register( new InstantSearch() );
+		$widget_manager->register( new AutoComplete() );
 	}
 }

@@ -21,8 +21,8 @@ class InstantSearch extends \Elementor\Widget_base{
 	{
 		$admin_settings         = Admin::get_default_settings();
         $search_config_settings = Admin::get_search_config_settings();
-		wp_register_script( 'frontend-script-1', CODEMANAS_TYPESENSE_ROOT_URI_PATH . 'assets/frontend/instant-search.js', [ 'wp-util' ], CODEMANAS_TYPESENSE_VERSION, true );
-		wp_localize_script( 'frontend-script-1', 'cm_typesense_instant_search_default_settings', [
+		wp_register_script( 'cm-ts-elementor-instantSearch', CODEMANAS_TYPESENSE_ROOT_URI_PATH . 'assets/frontend/instant-search.js', [ 'wp-util' ], CODEMANAS_TYPESENSE_VERSION, true );
+		wp_localize_script( 'cm-ts-elementor-instantSearch', 'cm_typesense_instant_search_default_settings', [
 			'debug'                => SCRIPT_DEBUG,
 			'search_api_key'       => $admin_settings['search_api_key'],
 			'port'                 => $admin_settings['port'],
@@ -41,18 +41,18 @@ class InstantSearch extends \Elementor\Widget_base{
 		// return[
 		// 	'frontend-script-1'
 		// ];
-		wp_enqueue_script( 'frontend-script-1' );
+		wp_enqueue_script( 'cm-ts-elementor-instantSearch' );
 	}
 
     public function get_name()
     {
-        return 'CM Typesense';
+        return 'Instant Search';
 
     }
 
     public function get_title()
     {
-        return esc_html(' CM Typesense', 'cm-typesense');
+        return esc_html(' Instant Search', 'cm-typesense');
     }
 
     
@@ -70,7 +70,7 @@ class InstantSearch extends \Elementor\Widget_base{
 	}
 
 	public function get_keywords() {
-		return [ 'dyroth', 'cm', 'typesense' ];
+		return [ 'cm', 'typesense' ];
 	}
 
 
