@@ -14,7 +14,7 @@ class InstantSearch extends \Elementor\Widget_base{
 	{
 		parent::__construct($data, $args);
 		// add_action( 'elementor/editor/after_enqueue_scripts ', array( $this, 'my_plugin_preview_scripts' ) );
-		add_action( 'elementor/preview/enqueue_scripts', array( $this, 'my_plugin_preview_scripts' )  );
+		//add_action( 'elementor/preview/enqueue_scripts', array( $this, 'my_plugin_preview_scripts' )  );
 	}
 
 	public function my_plugin_preview_scripts()
