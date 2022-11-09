@@ -100,11 +100,33 @@ class AutoComplete extends \Elementor\Widget_Base {
 			],
 
 		);
-		}
+		$this->add_control(
+			'placeHolder',
+			[
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'label' => esc_html__( 'Placeholder', 'CM Typesense' ),
+				'placeholder' => esc_html__( 'Enter your placeholder', 'CM Typesense' ),
+				'default' => 'Search for:',
+			]
+		);
+		$this->add_control(
+			'queryBy',
+			[
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'label' => esc_html__( 'Query By', 'CM Typesense' ),
+				
+			]
+		);
+
+
+}
 
 
 	protected function render() {
-	echo do_shortcode('[cm_typesense_autocomplete placeholder="Search for...]');
+		$settings = $this->get_settings_for_display();
+
+		$placeHolder = $settings['placeHolder'];
+		echo do_shortcode('[cm_typesense_autocomplete placeholder="'.$placeHolder.'"]');
 	}
 
 
